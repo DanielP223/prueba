@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="prog.js"></script>
+    <title>Selector de Vehículos de Guerra</title>
+</head>
+<body>
+
+    <form target="_self">
+        <h1>Proyecto de Guerra: EE. UU.</h1>
+
+        <div>
+            <h3>Selecciona un vehículo militar:</h3>
+        </div>
+
+        <div>
+            <label for="tipo">Tipo de vehículo:</label>
+            <select name="tipo" id="tipo" required>
+                <option value="">Seleccione tipo…</option>
+                <option value="tanque">Tanque</option>
+                <option value="avion">Avión</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="nombre">Nombre del vehículo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: M4 Sherman" required />
+        </div>
+
+        <div>
+            <label for="epoca">Época:</label>
+            <select id="epoca" name="epoca" required>
+                <option value="">Seleccione época…</option>
+                <option value="WW1">Primera Guerra Mundial</option>
+                <option value="WW2">Segunda Guerra Mundial</option>
+                <option value="GuerraFria">Guerra Fría</option>
+                <option value="Actualidad">Actualidad</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="year">Año de Servicio:</label>
+            <input type="number" id="year" name="year" min="1900" max="2025" required />
+        </div>
+
+        <div>
+            <label for="armamento">Armamento Principal:</label>
+            <input type="text" id="armamento" name="armamento" required />
+        </div>
+
+        <div>
+            <label for="valor">Valor técnico:</label>
+            <input type="text" id="valor" name="valor" placeholder="Ej: 900kg payload o 100mm de blindaje" required />
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" id="send-button" class="button" value="Agregar vehículo" />
+            <input type="reset" value="Borrar" class="button" />
+        </div>
+    </form>
+
+    <div class="container" id="container">
+        <!-- Aquí se agregarán los vehículos en formato visual tipo tarjetas -->
+        <input type="button" id="finish" class="button" value="Finalizar Selección" />
+    </div>
+
+</body>
+</html>
